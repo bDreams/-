@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <title>拖拽</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <style type="text/css">
+    .box-are {
+        width: 300px;
+        height: 300px;
+        border-radius: 6px;
+        background-color: #fff;
+        border: 1px solid #f2f2f2;
+        box-shadow: 0 0 5px #f5f5f5;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-left: -150px;
+        margin-top: -150px;
+    }
+    
+    .box-are h1 {
+        height: 30px;
+        line-height: 30px;
+        background-color: #f5f5f5;
+        width: 100%;
+    }
+    
+    .box-are:nth-child(2) {
+        left: 80%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="box-are drag">
+        <h1>标题</h1>
+    </div>
+    <div class="box-are drag">
+        <h1>标题</h1>
+    </div>
+    <script type="text/javascript" src="js/self.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('.drag').drag({
+            globle: true,
+            mask: false
+        });
+    });
+    </script>
+</body>
+
+</html>
